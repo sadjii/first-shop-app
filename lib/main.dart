@@ -10,12 +10,9 @@ void main() async {
   await Firebase.initializeApp();
   runApp(GetMaterialApp(
     initialBinding: Binding(),
-    home: FirstScreen(),
+    home: ControlView(),
     theme: ThemeData(
       fontFamily: 'OpenSans-SemiBold',
     ),
-    getPages: [
-      GetPage(name: '/HomeScreen', page: () => LoginScreen()),
-    ],
-  ));
+  ),);
 }
